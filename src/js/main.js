@@ -1,4 +1,4 @@
-const getRangedNum = (min = 0, max = 1) => {
+const getRangedNum = (min = 1, max = 1) => {
   return Math.floor(min + Math.random() * max);
 };
 
