@@ -3,11 +3,14 @@ const getRangedNum = (min = 0, max = 1) => {
 };
 
 const getRandomImg = () => {
-  const tagImg = document.querySelector(".image");
+  const wrapper = document.querySelector(".img-wrapper");
+  const img = document.createElement("img");
   const firstImgDefault = 1;
   const lastImg = 9;
 
-  tagImg.src = `./src/images/${getRangedNum(firstImgDefault, lastImg)}.jpg`;
+  wrapper.appendChild(img);
+  img.src = `./src/images/${getRangedNum(firstImgDefault, lastImg)}.jpg`;
+  img.alt = "random image";
 };
 
 getRandomImg();
